@@ -19,6 +19,7 @@
       min-height: 75vh;
       flex-direction: column;
       align-items: center;
+      align-content: center;
       justify-content: space-between;
     }
 
@@ -28,6 +29,7 @@
     }
 
     &__feature-text {
+      color: $color-white;
       animation-name: move-in-bottom;
       animation-duration: 0.5s;
       animation-fill-mode: backwards;
@@ -43,7 +45,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 30rem;
+        width: 50rem;
       }
     }
   }
@@ -104,7 +106,7 @@
     }
 
     @include respond(tab-port) {
-      max-width: 45rem;
+      max-width: 55rem;
       height: 10rem;
       font-size: 4.5rem;
       line-height: 4rem;
@@ -114,6 +116,7 @@
   }
 
   &__feature-text p {
+    color: $color-white;
     width: 48rem;
     font-size: 2.2rem;
     font-weight: 500;
@@ -166,8 +169,9 @@
     }
 
     @include respond(tab-port) {
-      width: 40rem;
-      height: 25rem;
+      margin-top: 5rem;
+      width: 70rem;
+      height: 40rem;
     }
 
     @include respond(tab-med) {
@@ -176,6 +180,11 @@
       // left: -3rem;
       // width: 40em;
       // height: 30em;
+    }
+
+    @include respond(tab-small) {
+      width: 60rem;
+      height: 40rem;
     }
 
     @include respond(phone) {
@@ -214,6 +223,7 @@
 
     @include respond(tab-port) {
       margin-top: 5px;
+      transform: translateX(25px);
     }
 
     a {
@@ -228,9 +238,9 @@
       }
 
       @include respond(tab-port) {
-        transform: translateX(-1rem);
         width: 80%;
         font-size: 1.5rem;
+        margin-top: 3rem;
       }
     }
   }

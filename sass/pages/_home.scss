@@ -869,6 +869,10 @@
       background-image: none;
     }
 
+    @include respond(phone) {
+      width: 70%;
+    }
+
     .content__container {
       display: flex;
       justify-content: center;
@@ -894,6 +898,11 @@
           width: 100%;
           transform: translateY(10rem);
         }
+
+        // @include respond(phone) {
+        //   width: 80%;
+
+        // }
       }
     }
   }

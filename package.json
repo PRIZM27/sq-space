@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist",
-    "run:sass": "node-sass sass/main.scss css/style.css"
+    "compile-styles": "node-sass sass/main.scss css/style.css"
   },
   "author": "",
   "license": "ISC",

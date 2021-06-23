@@ -1,0 +1,237 @@
+.hero {
+  &__parent {
+    padding: 0 5rem 0 5rem;
+    transform: translateY(25rem);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(laptop) {
+    }
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      padding: 0;
+      // transform: translate(20rem, 8rem);
+      transform: translateY(8rem);
+      width: 60%;
+      min-height: 75vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include respond(phone) {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    &__feature-text {
+      animation-name: move-in-bottom;
+      animation-duration: 0.5s;
+      animation-fill-mode: backwards;
+      animation-delay: 0.2s;
+      width: 40%;
+
+      @include respond(tab-land) {
+        max-width: 40rem;
+      }
+
+      @include respond(tab-port) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+      }
+    }
+  }
+
+  &__hat-heading-primary {
+    font-size: $font-size-medium;
+    font-weight: 500;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: $u-margin--tiny;
+
+    @include respond(big-desktop-max) {
+      font-size: $font-size-small;
+    }
+
+    @include respond(big-desktop-xxl) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(big-desktop-xl) {
+      font-size: 1.1rem;
+    }
+
+    @include respond(tab-land) {
+    }
+  }
+
+  &__heading-primary {
+    width: 100%;
+    margin: 0 55% 1.8rem 0;
+    font-size: 9rem;
+    height: 18rem;
+    line-height: 9rem;
+    color: $color-white;
+
+    @include respond(big-desktop-max) {
+      font-size: 7.5rem;
+    }
+
+    @include respond(desktop-xxl) {
+      font-size: 7rem;
+    }
+
+    @include respond(desktop-xl) {
+      width: 60rem;
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+
+    @include respond(tab-land) {
+      width: 100%;
+      font-size: 5rem;
+    }
+
+    @include respond(laptop) {
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+
+    @include respond(tab-port) {
+      max-width: 45rem;
+      height: 10rem;
+      font-size: 4.5rem;
+      line-height: 4rem;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__feature-text p {
+    width: 48rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+
+    @include respond(big-desktop-max) {
+      font-size: 1.8rem;
+      width: 40rem;
+    }
+
+    @include respond(desktop-xxl) {
+      width: 35rem;
+      font-size: 1.6rem;
+    }
+
+    @include respond(desktop-xl) {
+      width: 30rem;
+      font-size: 1.4rem;
+    }
+
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__feature__img-box {
+    width: 80rem;
+    height: 60rem;
+    // transform: translate(15rem, -10rem);
+
+    @include respond(big-desktop-max) {
+      width: 70rem;
+      height: 50rem;
+      // transform: translate(8rem, -10rem);
+    }
+
+    @include respond(big-desktop-xl) {
+      width: 60rem;
+      height: 40rem;
+      transform: translate(5rem, -10rem);
+    }
+
+    @include respond(tab-land) {
+      width: 45rem;
+      height: 30rem;
+      // transform: translate(3rem, -5rem);
+    }
+
+    @include respond(tab-port) {
+      width: 40rem;
+      height: 25rem;
+    }
+
+    @include respond(tab-med) {
+      // position: absolute;
+      // top: 25rem;
+      // left: -3rem;
+      // width: 40em;
+      // height: 30em;
+    }
+
+    @include respond(phone) {
+      width: 31rem;
+      height: 20rem;
+    }
+  }
+
+  &__feature__img {
+    min-width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(15, 123, 255, 0.529) 0%,
+        rgba(42, 100, 248, 0.413) 100%
+      ),
+      url('../img/website.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    // @include respond(tab-land) {
+    //   transform: translateY(25rem);
+    // }
+  }
+
+  &__feature__text-links {
+    margin-top: $u-margin--small;
+
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+      margin-top: 5px;
+    }
+
+    a {
+      display: inline-block;
+      transform: translateX(-4rem);
+      -webkit-transform: translateX(-4rem);
+      -moz-transform: translateX(-4rem);
+      -ms-transform: translateX(-4rem);
+      -o-transform: translateX(-4rem);
+
+      @include respond(tab-land) {
+      }
+
+      @include respond(tab-port) {
+        transform: translateX(-1rem);
+        width: 80%;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

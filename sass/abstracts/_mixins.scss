@@ -1,0 +1,120 @@
+@mixin clearfix {
+  *::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translateY(-8rem);
+}
+
+@mixin realAbsCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+// Media Query Manager
+
+/* 
+
+0 - 600px: Phone
+600px - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px +: Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// Order that Jonas prefers to write media queries: Base + typography > general layout + grid > page layout > components
+
+// 1em = 16px (coming from default browser settings for font-size)
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px / 16px = 37.5em;
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-tab-land {
+    @media (min-width: 37.5em) and (max-width: 80em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-small {
+    @media only screen and (max-width: 48em) {
+      // 768px / 16px = 48em;
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-med {
+    @media only screen and (max-width: 50em) {
+      // 800px / 16px = 50em;
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      // 900px / 16px = 56.25em;
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 64.06em) {
+      // 1025px / 16px = 64.06
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 80em) {
+      // 1280px / 16px = 80em
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-xl {
+    @media only screen and (max-width: 90em) {
+      // 1440px/ 16px = 90
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-xxl {
+    @media only screen and (max-width: 92.5em) {
+      // 1480px/ 16px = 92.5
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop-max {
+    @media only screen and (max-width: 112.5em) {
+      // 1800 or less
+      // 1800px / 16px = 112.5 em;
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop-min {
+    @media only screen and (min-width: 112.5em) {
+      // 1800px / 16px = 112.5 em;
+      @content;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.overlay-popup {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color-black, 0.8);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: rgba($color-black, 0.7);
+  }
+
+  &__content {
+    min-width: 90vh;
+    min-height: 40vh;
+    opacity: 0;
+    display: table;
+    overflow: hidden;
+    transition: all 0.5s 0.2s;
+  }
+
+  // &__currency {
+  //   font-size: 3.2rem;
+  // }
+
+  // &__options {
+  //   font-size: 2.6rem;
+  //   color: $color-white;
+  //   font-weight: 300;
+  //   // text-transform: uppercase;
+  // }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    // transform: translateY(-5rem);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-light-grey;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 6rem;
+      text-decoration: none;
+      display: inline-block;
+      // transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .overlay__heading--currency h2 {
+    font-size: 3.2rem;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: $color-white;
+  }
+
+  .overlay__options {
+    text-align: center;
+    background: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay__option {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    border: none;
+
+    span {
+      font-size: 2.8rem;
+      color: $color-white;
+      font-weight: 100;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      opacity: 0;
+      width: 0px;
+      height: 0.1rem;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after,
+    &:active::after {
+      width: 80px;
+      background-color: $color-white;
+      opacity: 1;
+    }
+  }
+}

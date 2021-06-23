@@ -1,0 +1,1189 @@
+.intro {
+  max-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 35rem;
+  background-image: url('../img/orange-landscape.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // position: relative;
+
+  @include respond(tab-med) {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 10rem;
+  }
+}
+
+.nav-top--home,
+.nav-top--home a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+// Section (Award Winning Web Designs Heading)
+// Houses image slider
+.section {
+  &__offerings {
+    padding: 10rem 8rem;
+    color: $color-black;
+
+    // @include respond(tab-land) {
+    //   height: 90vh;
+    // }
+
+    @include respond(tab-med) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+    }
+  }
+
+  &__offerings__content-box {
+    // width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-med) {
+      align-items: flex-start;
+      padding: 2rem 0 0 2rem;
+      margin: 0;
+    }
+
+    h2 {
+      max-width: 45rem;
+      @include respond(laptop) {
+        font-size: 4.5rem;
+        // width: 40rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 3.2rem;
+      }
+
+      @include respond(tab-med) {
+        width: 25rem;
+        font-size: 2.8rem;
+        margin: 0 0 2rem 0;
+        text-align: left;
+      }
+    }
+  }
+
+  // Implemented this rule because the h2 and copy-box sibling were fighting for space on same line. Look here if any issues arise with spacing. Fixed the issue by making their parent a flex container
+  // h2 {
+  //   width: 70rem;
+  // }
+
+  &__offerings__copy-box {
+    // max-width: 90%;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+
+    @include respond(tab-med) {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__offerings__copy {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    max-width: 50rem;
+
+    @include respond(laptop) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    @include respond(tab-med) {
+      text-align: left;
+    }
+  }
+
+  &__offerings__feature__links__box {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(tab-med) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    a:first-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// Portfolio section
+.section {
+  &__portfolio {
+    max-width: 100vw;
+    // min-height: 100vh;
+    padding: 8rem 4rem;
+    background-color: #69a5a4;
+
+    @include respond(phone) {
+    }
+
+    &__content-box-one {
+      min-width: 80%;
+      margin: 0 auto;
+      padding: 8rem 4rem;
+
+      @include respond(phone) {
+        min-width: 100%;
+        padding: 0;
+      }
+    }
+
+    &__heading-primary {
+      font-size: 5.6rem;
+      max-width: 60rem;
+      height: auto;
+      line-height: 5rem;
+      text-align: center;
+      margin: 0 auto 3rem auto;
+
+      @include respond(phone) {
+        min-width: 20rem;
+        font-size: 4rem;
+      }
+    }
+
+    &__copy-box {
+      max-width: 65rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__copy {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    &__links-box {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &__focal {
+      padding-top: 6rem;
+      max-width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+
+      // flex-shrink: 1;
+
+      img {
+        display: flex;
+
+        @include respond(desktop-xxl) {
+          max-width: 99%;
+        }
+        // @include respond(desktop-xl) {
+        //   max-width: 90%;
+        // }
+        // @include respond(tab-land) {
+        //   min-width: 80%;
+        // }
+      }
+    }
+
+    &__content-box-two {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .split-content {
+        &__box {
+          max-width: 148rem;
+          margin: 0 auto;
+          padding: 8rem 4rem;
+          display: flex;
+          justify-content: space-between;
+
+          @include respond(desktop-xxl) {
+            max-width: 95%;
+          }
+
+          @include respond(phone) {
+            padding: 4rem 0 2rem 0;
+          }
+
+          // @include respond(desktop-xl) {
+          //   max-width: 80%;
+          //   margin: 0;
+          // }
+
+          // @include respond(tab-land) {
+          //   min-width: 80%;
+          //   padding: 8rem 4rem 5rem 4rem;
+          // }
+
+          @include respond(phone) {
+            flex-direction: column;
+          }
+
+          &--1 {
+            max-width: 40%;
+
+            // @include respond(desktop-xxl) {
+            //   min-width: 35%;
+            // }
+
+            // @include respond(desktop-xl) {
+            //   max-width: 20%;
+            // }
+
+            // @include respond(tab-land) {
+            //   width: 85%;
+            // }
+
+            @include respond(phone) {
+              min-width: 100%;
+            }
+            .customer__quote {
+              // max-width: 50%;
+
+              // @include respond(tab-land) {
+              //   width: 7%;
+              // }
+
+              @include respond(phone) {
+                width: 80%;
+              }
+            }
+            blockquote {
+              font-size: 2.8rem;
+              font-weight: 600;
+              line-height: 1.3;
+
+              @include respond(desktop-xl) {
+                font-size: 2.4rem;
+              }
+
+              @include respond(tab-land) {
+                font-size: 2.2rem;
+              }
+
+              @include respond(laptop) {
+                font-size: 2.2rem;
+              }
+            }
+
+            .cite__container {
+              transform: translateY(20rem);
+
+              @include respond(tab-land) {
+                // width: 75%;
+                // transform: translateY(11rem);
+              }
+            }
+            cite {
+              display: inline-block;
+              font-size: 2rem;
+              font-weight: 500;
+              text-transform: uppercase;
+              line-height: 3;
+
+              @include respond(tab-land) {
+                line-height: 1;
+              }
+            }
+
+            span {
+              display: inline-block;
+              opacity: 50%;
+            }
+          }
+
+          &--2 {
+            max-width: 50%;
+
+            @include respond(phone) {
+              min-width: 100%;
+            }
+
+            .img__container {
+              border: 2px solid hotpink;
+
+              min-width: 100%;
+
+              // background-image: url('../img/adrienne-raquel-750w.jpg');
+              background-size: cover;
+            }
+
+            img {
+              display: flex;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Section - Blogging Tools
+.section {
+  &__tools {
+    &__content-box--1 {
+      // max-width: 100%;
+      // height: 60rem;
+      // margin: 0 auto;
+      min-height: 75vh;
+      display: flex;
+      align-items: stretch;
+
+      @include respond(tab-med) {
+        flex-direction: column;
+        height: auto;
+      }
+    }
+
+    &__split-content {
+      &-box--1 {
+        min-width: 50%;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        background-image: url('../img/mountains.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        // position: relative;
+        @include respond(tab-med) {
+          width: 100%;
+          order: 1;
+          background-image: none;
+          padding-top: 0;
+        }
+
+        .img__box {
+          display: flex;
+          width: 100%;
+          padding: 4rem;
+          justify-content: center;
+
+          // flex-shrink: 3;
+          // @include respond(desktop-xxl) {
+          //   width: 70%;
+          // }
+          // @include respond(desktop-xl) {
+          //   width: 65%;
+          // }
+          // @include respond(tab-land) {
+          // }
+          @include respond(tab-med) {
+            width: 90%;
+            height: 50rem;
+            padding: 0;
+          }
+
+          .img__wrapper {
+            min-width: 100%;
+            background-image: url(../img/souto.png);
+            background-repeat: no-repeat;
+            background-size: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      &-box--2 {
+        color: $color-black;
+        padding: 4rem;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond(tab-med) {
+          padding: 6rem 2rem;
+          order: 0;
+          align-content: flex-start;
+          padding: 3.2rem;
+        }
+
+        .heading-primary {
+          h2 {
+            font-size: 6rem;
+            width: 25rem;
+            height: 30rem;
+            text-align: left;
+            line-height: 1;
+
+            @include respond(tab-med) {
+              font-size: 3rem;
+              margin-bottom: 2rem;
+              height: 3rem;
+            }
+          }
+        }
+
+        .section__copy-box {
+          @include respond(tab-med) {
+          }
+        }
+
+        p {
+          max-width: 45rem;
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 1.2;
+          margin-bottom: 3rem;
+
+          @include respond(tab-med) {
+            // max-width: 45rem;
+            font-size: 2rem;
+            line-height: 1;
+          }
+        }
+
+        span {
+          display: inline-block;
+          color: $color-black;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__content-box--2 {
+      min-width: 100%;
+      background-color: #828077;
+
+      .split__container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 8rem 4rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(laptop) {
+          width: 90%;
+        }
+
+        @include respond(tab-med) {
+          flex-direction: column;
+          margin: 0;
+          padding: 4rem 2rem;
+          width: 100%;
+        }
+      }
+
+      .section__tools__split-box--1 {
+        width: 35%;
+
+        @include respond(tab-med) {
+          width: 100%;
+        }
+
+        .section__tools__copy-box {
+          display: flex;
+          flex-direction: column;
+          width: 45rem;
+          // transform: translateY(14rem);
+
+          @include respond(tab-land) {
+            width: 40rem;
+          }
+
+          @include respond(laptop) {
+            width: 35rem;
+          }
+
+          @include respond(tab-med) {
+            width: 45rem;
+          }
+
+          @include respond(phone) {
+            width: 95%;
+          }
+        }
+        h2 {
+          font-size: 5.6rem;
+          width: 50rem;
+          height: auto;
+          line-height: 5rem;
+          text-align: left;
+          margin-bottom: 2rem;
+
+          @include respond(desktop-xl) {
+            font-size: 5rem;
+          }
+
+          @include respond(laptop) {
+            font-size: 4rem;
+          }
+
+          @include respond(tab-med) {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            width: 95%;
+          }
+        }
+
+        p {
+          font-size: 2.2rem;
+          font-weight: 600;
+          line-height: 1.2;
+          margin-bottom: 3rem;
+
+          @include respond(desktop-xl) {
+            font-size: 2rem;
+          }
+
+          @include respond(laptop) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .section__tools__split-box--2 {
+        width: 70%;
+
+        @include respond(tab-med) {
+          width: 100%;
+        }
+
+        .images__image-container {
+          img {
+            width: 90%;
+          }
+          @include respond(desktop-xl) {
+            width: 85%;
+          }
+
+          @include respond(desktop-xxl) {
+            // width: 90%;
+          }
+
+          @include respond(tab-med) {
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Analytics Section
+.section {
+  &__analytics {
+    min-width: 100vw;
+    min-height: 100vh;
+    .split__container {
+      // max-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond(desktop-xxl) {
+        min-width: 80%;
+      }
+
+      @include respond(tab-med) {
+        flex-direction: column;
+      }
+    }
+
+    .content__box--1 {
+      width: 50%;
+      background-color: $color-black;
+      background-size: cover;
+      color: $color-white;
+      padding: 5rem 5rem 25rem 5rem;
+      display: flex;
+      flex-direction: column;
+
+      @include respond(tab-med) {
+        width: 100%;
+      }
+
+      .copy__box {
+        width: auto;
+
+        h2 {
+          font-size: 5.6rem;
+          width: 30rem;
+          height: auto;
+          line-height: 5rem;
+          text-align: left;
+          margin-bottom: 2rem;
+
+          @include respond(tab-land) {
+            font-size: 5rem;
+          }
+
+          @include respond(laptop) {
+            font-size: 4.2rem;
+          }
+
+          @include respond(phone) {
+            width: 100%;
+          }
+        }
+      }
+
+      p {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+        width: 50rem;
+
+        @include respond(tab-land) {
+          font-size: 1.8rem;
+          width: 40rem;
+        }
+
+        @include respond(laptop) {
+          font-size: 1.6rem;
+          width: 35rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+          width: 30rem;
+        }
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      .slideshow__copy__container {
+        transform: translateY(25rem);
+        display: flex;
+        flex-direction: column;
+
+        .analytics__slide-copy {
+          color: $color-white;
+          width: 45rem;
+          opacity: 50%;
+
+          @include respond(tab-land) {
+            width: 40rem;
+          }
+
+          @include respond(tab-port) {
+            width: 35rem;
+          }
+
+          @include respond(tab-med) {
+            width: 100%;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 1rem;
+      }
+    }
+
+    .content__box--2 {
+      min-width: 50%;
+      min-height: 100%;
+      background-image: url(../img/analytics-temp-placeholder.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include respond(tab-med) {
+        padding: 20rem;
+      }
+
+      @include respond(phone) {
+        content: '';
+        padding: 15rem 5rem;
+      }
+    }
+  }
+}
+
+// Section - Integrate
+
+.section {
+  &__integrate {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 8rem 4rem 5.6rem;
+
+    @include respond(tab-small) {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 3rem;
+    }
+
+    .copy__box__container {
+      height: 20rem;
+      margin: 0 auto;
+      text-align: center;
+
+      @include respond(big-desktop-max) {
+        width: 50rem;
+      }
+
+      @include respond(tab-small) {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      h2 {
+        font-size: 5.6rem;
+
+        height: auto;
+        line-height: 5rem;
+
+        @include respond(laptop) {
+          font-size: 4.5rem;
+        }
+
+        @include respond(tab-land) {
+          font-size: 5rem;
+        }
+
+        @include respond(tab-small) {
+          font-size: 2.8rem;
+        }
+      }
+
+      p {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @include respond(tab-land) {
+          font-size: 1.8rem;
+        }
+
+        @include respond(tab-small) {
+          width: 45rem;
+          text-align: left;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      span {
+        display: inline-block;
+        color: $color-black;
+        font-weight: 600;
+      }
+    }
+
+    &__socials__container {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+
+      @include respond(tab-small) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5.8rem;
+
+        :nth-child(-n + 3) {
+          margin-bottom: 3rem;
+        }
+      }
+
+      .integration-block__integration {
+        display: flex;
+        // border: 2px solid hotpink;
+        text-align: center;
+        @include respond(tab-small) {
+          width: 33%;
+
+          // margin-right: 5rem;
+          // padding: 2rem;
+        }
+        img {
+          display: inline-block;
+          width: 19%;
+        }
+      }
+    }
+  }
+}
+
+// Mobile editing section
+// Need to add image of smart phone. This should increase height of container in order to be correct size. If not, just add padding to first split-content box and the neighboring split-content box will also increase in height on its own
+
+.section__mobile {
+  width: 100%;
+
+  .split__container {
+    display: flex;
+
+    @include respond(tab-small) {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .content__box--1 {
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/track-mobile-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0;
+
+    @include respond(tab-small) {
+      order: 1;
+      width: 90%;
+      height: 60%;
+      position: absolute;
+      top: 30rem;
+      left: 5rem;
+      padding: 0;
+      background-image: none;
+    }
+
+    .content__container {
+      display: flex;
+      justify-content: center;
+      display: block;
+
+      @include respond(tab-small) {
+        text-align: center;
+      }
+
+      img {
+        display: inline-block;
+        width: 100%;
+
+        @include respond(tab-land) {
+          width: 85%;
+        }
+
+        @include respond(laptop) {
+          width: 75%;
+        }
+
+        @include respond(tab-small) {
+          width: 100%;
+          transform: translateY(10rem);
+        }
+      }
+    }
+  }
+
+  .content__box--2 {
+    width: 50%;
+    height: auto;
+    padding: 4rem;
+    background-color: #485b60;
+    color: $color-white;
+
+    @include respond(tab-small) {
+      border: 1px solid pink;
+      width: 100vw;
+      height: 100vh;
+      padding: 4rem 4rem 150rem 4rem;
+      order: 0;
+    }
+
+    h2 {
+      font-size: 5.6rem;
+      width: 95%;
+      height: auto;
+      line-height: 5rem;
+      text-align: left;
+      margin-bottom: 2rem;
+
+      @include respond(tab-land) {
+        font-size: 5rem;
+      }
+
+      @include respond(laptop) {
+        font-size: 4.8rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 4.4rem;
+      }
+
+      @include respond(tab-med) {
+        font-size: 4rem;
+      }
+    }
+
+    .feature-text__links {
+      width: 30em;
+
+      @include respond(phone) {
+        width: 20rem;
+      }
+
+      span {
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .slideshow__copy__container {
+    transform: translateY(35rem);
+
+    @include respond(tab-land) {
+      transform: translateY(30rem);
+    }
+
+    @include respond(laptop) {
+      transform: translateY(25rem);
+    }
+
+    @include respond(tab-port) {
+      transform: translateY(20rem);
+    }
+
+    @include respond(tab-small) {
+      transform: translateY(100rem);
+    }
+  }
+
+  p {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    width: 50rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+      width: 40rem;
+    }
+
+    @include respond(laptop) {
+      font-size: 1.8rem;
+      width: 35rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      width: 25rem;
+    }
+  }
+}
+
+// How to section
+.section__design-offerings {
+  min-width: 100vw;
+  min-height: 60vh;
+  background-color: $color-white;
+  color: $color-black;
+
+  &__content-box--1 {
+    max-width: 148rem;
+    margin: 0 auto;
+    display: flex;
+    padding: 8rem 4rem;
+
+    @include respond(tab-med) {
+      flex-direction: column;
+      padding: 4rem 4rem;
+    }
+  }
+
+  &__split-content {
+    &-box--1 {
+      min-width: 50%;
+      min-height: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      @include respond(tab-med) {
+        min-width: 100%;
+      }
+
+      .copy__box {
+        width: 50rem;
+        margin: 0 auto;
+
+        @include respond(tab-med) {
+          max-width: 70rem;
+          margin: 0;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      h2 {
+        font-size: 5.6rem;
+        width: 40rem;
+        height: auto;
+        line-height: 5rem;
+
+        @include respond(tab-land) {
+          font-size: 5rem;
+        }
+
+        @include respond(tab-laptop) {
+          font-size: 4.5rem;
+        }
+
+        // @include respond(tab-port) {
+        //   font-size: 4rem;
+        // }
+
+        @include respond(tab-port) {
+          font-size: 2.8rem;
+          width: 38rem;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      span {
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include respond(tab-land) {
+        }
+      }
+    }
+
+    &-box--2 {
+      color: $color-black;
+      min-width: 50%;
+
+      .heading-primary {
+        height: 60%;
+      }
+
+      .section__copy-box {
+        // max-width: 100rem;
+
+        .list__box {
+          max-width: 65rem;
+          font-size: $font-size-standard;
+          line-height: 2;
+
+          @include respond(tab-med) {
+            margin-top: 2rem;
+          }
+
+          ol {
+            max-width: 70rem;
+          }
+        }
+      }
+
+      p {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+
+        @include respond(tab-land) {
+          font-size: 1.9rem;
+        }
+      }
+
+      span {
+        display: inline-block;
+        color: $color-black;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// All in one section
+
+.all-in-one {
+  min-width: 100vw;
+  min-height: 30vh;
+
+  &__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 8rem 4rem;
+
+    @include respond(tab-med) {
+      padding: 5rem 4rem;
+    }
+
+    .all-in-one__text {
+      display: flex;
+      justify-content: space-between;
+
+      @include respond(tab-med) {
+        flex-direction: column;
+      }
+
+      p {
+        max-width: 90rem;
+        font-size: 4.8rem;
+        font-weight: 500;
+        line-height: 1;
+        color: $color-white;
+
+        @include respond(desktop-xxl) {
+          font-size: 4.5rem;
+        }
+
+        @include respond(desktop-xl) {
+          font-size: 4rem;
+        }
+
+        @include respond(tab-land) {
+          font-size: 2.6rem;
+        }
+
+        @include respond(tab-med) {
+          max-width: 50rem;
+          font-size: 2.2rem;
+          margin-bottom: 3rem;
+        }
+      }
+
+      a {
+        display: inline-block;
+
+        @include respond(desktop-xl) {
+          max-width: 250rem;
+          font-size: 1.2rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

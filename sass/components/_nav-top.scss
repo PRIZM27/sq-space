@@ -1,0 +1,98 @@
+.nav {
+  &-top {
+    display: flex;
+    // padding: 3.5rem;
+    // border: 1px solid pink;
+    min-width: 100vw;
+    height: 8rem;
+    font-size: $font-size-small;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    position: fixed; // Changed from fixed to relative in order to get small nav to work. It's working fine now, but test and change back to fixed if need be
+    // top: -0.5rem;
+    transition: all 0.3s;
+    z-index: 10;
+    padding: 5rem 2.5rem;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__logo--box {
+    margin-left: 0;
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+
+    .fa-squarespace {
+      font-size: 4rem;
+      margin-right: 1rem;
+    }
+
+    #logo__text {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+
+  &-top-link-box {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-med) {
+      display: none;
+    }
+  }
+
+  &-top-link-box button,
+  &-top-link-box a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &-top-link-box button {
+    background-color: transparent;
+    border: none;
+    font-size: $font-size-small;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__span--top {
+    display: flex;
+    flex-grow: 2;
+  }
+
+  // Styling for home page top navigation
+
+  &-top-cta-box a {
+    display: inline-block;
+    flex-shrink: 3;
+
+    @include respond(tab-med) {
+      display: none;
+    }
+
+    // &:not(:first-child) {
+    //   padding: 2rem 3rem;
+    //   margin-left: 4rem;
+    //   color: $color-black;
+    //   font-weight: 500;
+    //   background-color: #fff;
+    //   border-radius: 3px;
+    //   -webkit-border-radius: 3px;
+    //   -moz-border-radius: 3px;
+    //   -ms-border-radius: 3px;
+    //   -o-border-radius: 3px;
+    // }
+  }
+}

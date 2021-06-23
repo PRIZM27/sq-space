@@ -1,0 +1,197 @@
+// .mobile__top--nav {
+//   color: black;
+//   z-index: 100;
+//   height: 10rem;
+//   // position: relative;
+//   background-color: $color-black;
+
+//   &__checkbox {
+//     display: none;
+//   }
+
+//   &__button {
+//     border: 1px solid pink;
+//     background-color: $color-white;
+//     height: 7rem;
+//     width: 7rem;
+//     position: fixed;
+//     top: 1rem;
+//     right: 6rem;
+//     z-index: 200;
+//   }
+
+//   // &__background {
+//   //   height: 100vh;
+//   //   width: 0.01px;
+//   //   position: fixed;
+//   //   top: 0;
+//   //   right: 1px;
+//   //   background-color: $color-black;
+//   //   background-image: linear-gradient(
+//   //     120deg,
+//   //     transparent 0%,
+//   //     transparent 50%,
+//   //     black 2%
+//   //   );
+//   //   background-size: 220%;
+//   //   transition: all 0.5s;
+
+//   //   z-index: 100;
+//   // }
+
+//   .bg-effect {
+//     background-position: 100%;
+//     width: 100vw;
+//   }
+
+//   // The entire area that the navigation list will reside in
+//   &__nav {
+//     display: flex;
+//     // border: 2px solid pink;
+//     // height: 100vh;
+//     // width: 900px;
+//     // position: fixed;
+//     // top: 8rem;
+//     // left: 0;
+//     // z-index: 150;
+//     // opacity: 0;
+//     // width: 0;
+//     // transition: all 0.1s ease;
+//     // transition-delay: 0s;
+//   }
+
+//   &__list {
+//     display: flex;
+
+//     list-style-type: none;
+//     text-align: center;
+//   }
+
+//   &__item {
+//     margin-bottom: 2rem;
+//     text-align: start;
+//   }
+
+//   &__link {
+//     display: inline-block;
+//     &:link,
+//     &:visited {
+//       font-size: 3rem;
+//       color: $color-white;
+//       padding: 1rem 2rem;
+//       text-decoration: none;
+//       background-image: linear-gradient(
+//         120deg,
+//         transparent 0%,
+//         transparent 50%,
+//         hotpink 50%
+//       );
+//       background-size: 220%;
+//       transition: all 0.4s;
+//     }
+
+//     &:hover,
+//     &:active {
+//       background-position: 100%;
+//       color: $color-black;
+//       transform: translateX(1rem);
+//     }
+//   }
+// }
+
+// // Instead doubling markup for pop-up nav box, translate it down and add this class to it for styling
+// .small-nav__boxes__container {
+//   border: 1px solid blue;
+//   width: 35rem;
+//   font-size: 2rem;
+//   padding-left: 2rem;
+//   text-align: start;
+// }
+
+// .small__nav {
+//   z-index: 2100;
+//   border: none;
+//   font-size: 2.5rem;
+//   color: #fff;
+//   background-color: transparent;
+//   position: fixed;
+//   border: none;
+//   top: 2.5rem;
+//   right: 6.5rem;
+//   cursor: pointer;
+// }
+
+// .icons__small-nav {
+//   // @include respond(tab-med) {
+//   //   display: block;
+//   // }
+// }
+
+// .nav-active_ul {
+//   opacity: 1;
+//   transform: translateY(2rem);
+//   transition: all 0.2s ease;
+//   transition-delay: 0.3s;
+//   width: 1000px;
+// }
+
+.mobile__top--nav {
+  display: none;
+  background-color: transparent;
+  position: fixed;
+  min-width: 100vw;
+  padding-top: 1rem;
+  z-index: 10000;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+  &__wrapper {
+    color: $color-white;
+    // background-color: $color-black;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #mobile__top-nav__logo {
+      font-size: 20px;
+    }
+  }
+}
+
+.navigation__mobile__menu-bar {
+  // position: fixed;
+  // top: 1rem;
+  // right: 4rem;
+  z-index: 10000;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.navigation__mobile__toggle {
+  // display: none;
+  // z-index: 10000;
+  color: $color-white;
+  font-size: 1.8rem;
+  border: none;
+  background-color: transparent;
+  // transform: translateX(20rem);
+  cursor: pointer;
+
+  #times {
+    position: absolute;
+    right: 1px;
+  }
+
+  .not_active_mobile {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+// div > button {
+//   margin: 2rem;
+//   background-color: transparent;
+//   border: none;
+// }

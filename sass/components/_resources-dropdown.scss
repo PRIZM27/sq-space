@@ -1,0 +1,68 @@
+.resources {
+  &__menu {
+    transition: all 0.2s linear;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+
+    &__shell {
+      position: fixed;
+      top: 10rem;
+      right: 9rem;
+      // width: 90%;
+      // height: 40rem;
+      padding: 5rem 5rem;
+      display: flex;
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      // Experimenting animatable props
+      width: 90%;
+      height: 0.01rem;
+      visibility: hidden;
+    }
+  }
+
+  &__content__box {
+    width: 24.5%;
+    color: $color-white;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-right: 8rem;
+
+    img {
+      position: realtive;
+      display: block;
+      width: 100%;
+      padding-top: 22px;
+    }
+  }
+
+  &__text {
+    p {
+      opacity: 0.6;
+      font-size: 1.2rem;
+      color: #a0a0a0;
+    }
+  }
+  &__heading__text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 2rem;
+  }
+}
+
+.show__resources {
+  display: flex;
+  justify-content: space-around;
+  opacity: 1;
+  transform: translateY(-3rem);
+  height: 40rem;
+  visibility: visible;
+  // animation-name: move-in-bottom;
+  // animation-duration: 0.3s;
+  // animation-fill-mode: backwards;
+  // animation-delay: 0.2s;
+}

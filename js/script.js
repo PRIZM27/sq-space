@@ -1,5 +1,4 @@
 // Selectors
-newFeature();
 
 const topNav = document.querySelector('.nav-top');
 const stickyNav = document.querySelector('.sticky__nav');
@@ -311,6 +310,3 @@ function showColumns(e) {
 // Show burger icon when full screen mobile nav closed; show x icon when full screen mobile nav open
 
 // Select the icons
-function newFeature() {
-  console.log('WELCOME TO THE APP!');
-}

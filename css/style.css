@@ -706,7 +706,6 @@ a:link {
     .footer {
       flex-direction: column; } }
   .footer .preferences__settings {
-    border: 1px solid red;
     padding-left: 4rem;
     width: 75%; }
     @media only screen and (max-width: 64.06em) {

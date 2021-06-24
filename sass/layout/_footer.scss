@@ -12,25 +12,28 @@
   }
 
   .preferences__settings {
+    border: 1px solid red;
     padding-left: 4rem;
+    width: 75%;
 
     @include respond(laptop) {
       order: 1;
       display: flex;
-      justify-content: space-between;
-      max-width: 30%;
+      justify-content: center;
       padding-left: 0;
       padding-bottom: 2rem;
       margin: 0 auto;
     }
 
     @include respond(phone) {
-      margin: 0;
-      // justify-content: center;
+      // margin: 0;
+      // // justify-content: center;
     }
 
     .currency__box {
+      width: 15rem;
       a {
+        width: 100%;
         display: inline-block;
         margin-right: 2rem;
         text-align: left;
@@ -40,6 +43,8 @@
       }
     }
     .language__box {
+      margin-left: 2rem;
+      width: 15rem;
     }
   }
 

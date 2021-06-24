@@ -54,7 +54,8 @@
   border: none;
   padding: 1rem;
 
-  @include respond(laptop) {
+  @include respond(phone) {
+    width: 100%;
   }
 
   // .currency-symbol .currency-code {

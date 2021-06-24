@@ -885,6 +885,7 @@
 
     @include respond(phone) {
       width: 70%;
+      height: auto;
     }
 
     .content__container {
@@ -909,7 +910,6 @@
         }
 
         @include respond(tab-small) {
-          width: 100%;
           transform: translateY(10rem);
         }
 
@@ -934,6 +934,11 @@
       height: 100vh;
       padding: 4rem 4rem 150rem 4rem;
       order: 0;
+    }
+
+    @include respond(phone) {
+      height: 90vh;
+      padding: 4rem 4rem 100rem 4rem;
     }
 
     h2 {
@@ -994,6 +999,11 @@
     @include respond(tab-small) {
       transform: translateY(100rem);
     }
+
+    @include respond(phone) {
+      display: flex;
+      transform: translateY(65rem);
+    }
   }
 
   p {
@@ -1016,6 +1026,10 @@
     @include respond(tab-port) {
       font-size: 1.5rem;
       width: 25rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.2rem;
     }
   }
 }

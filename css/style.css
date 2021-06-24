@@ -1028,6 +1028,9 @@ a:link {
   max-width: 100vw;
   padding: 8rem 4rem;
   background-color: #69a5a4; }
+  @media only screen and (max-width: 37.5em) {
+    .section__portfolio {
+      padding: 8rem 0; } }
   .section__portfolio__content-box-one {
     min-width: 80%;
     margin: 0 auto;
@@ -1074,6 +1077,9 @@ a:link {
     max-width: 100%;
     display: flex;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .section__portfolio__content-box-two {
+        min-width: 100%; } }
     .section__portfolio__content-box-two .split-content__box {
       max-width: 148rem;
       margin: 0 auto;
@@ -1085,12 +1091,14 @@ a:link {
           max-width: 95%; } }
       @media only screen and (max-width: 37.5em) {
         .section__portfolio__content-box-two .split-content__box {
-          padding: 4rem 0 2rem 0; } }
+          padding: 4rem 0 2rem 0;
+          height: 60rem; } }
       @media only screen and (max-width: 37.5em) {
         .section__portfolio__content-box-two .split-content__box {
           flex-direction: column; } }
       .section__portfolio__content-box-two .split-content__box--1 {
-        max-width: 40%; }
+        max-width: 40%;
+        color: #fff; }
         @media only screen and (max-width: 37.5em) {
           .section__portfolio__content-box-two .split-content__box--1 {
             min-width: 100%; } }
@@ -1112,6 +1120,9 @@ a:link {
               font-size: 2.2rem; } }
         .section__portfolio__content-box-two .split-content__box--1 .cite__container {
           transform: translateY(20rem); }
+          @media only screen and (max-width: 64.06em) {
+            .section__portfolio__content-box-two .split-content__box--1 .cite__container {
+              transform: translateY(8rem); } }
         .section__portfolio__content-box-two .split-content__box--1 cite {
           display: inline-block;
           font-size: 2rem;

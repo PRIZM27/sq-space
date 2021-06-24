@@ -131,6 +131,7 @@
     background-color: #69a5a4;
 
     @include respond(phone) {
+      padding: 8rem 0;
     }
 
     &__content-box-one {
@@ -205,6 +206,10 @@
       display: flex;
       justify-content: center;
 
+      @include respond(phone) {
+        min-width: 100%;
+      }
+
       .split-content {
         &__box {
           max-width: 148rem;
@@ -219,6 +224,7 @@
 
           @include respond(phone) {
             padding: 4rem 0 2rem 0;
+            height: 60rem;
           }
 
           // @include respond(desktop-xl) {
@@ -237,6 +243,7 @@
 
           &--1 {
             max-width: 40%;
+            color: $color-white;
 
             // @include respond(desktop-xxl) {
             //   min-width: 35%;
@@ -288,6 +295,13 @@
               @include respond(tab-land) {
                 // width: 75%;
                 // transform: translateY(11rem);
+              }
+
+              @include respond(laptop) {
+                transform: translateY(8rem);
+              }
+
+              @include respond(phone) {
               }
             }
             cite {

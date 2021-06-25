@@ -41,18 +41,24 @@
 
     &__wrapper {
       min-width: 90vh;
+      height: 80vh;
       position: relative;
-      -webkit-box-flex: 1;
-      flex-grow: 1;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
+      display: flex;
       flex-direction: column;
       padding-top: 92px;
+      // justify-content: space-between;
+      // flex-grow: 1;
+      // display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      // -webkit-box-direction: normal;
       // overflow-y: scroll;
-    }
-
-    &__products {
+      .navigation__mobile__login-button {
+        // border: 2px solid red;
+        // width: 100%;
+        // display: block;
+        // position: relative;
+        // top: 345px;
+      }
     }
 
     &__resources {

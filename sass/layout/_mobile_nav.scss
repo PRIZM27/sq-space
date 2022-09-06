@@ -46,6 +46,7 @@
       display: flex;
       flex-direction: column;
       padding-top: 92px;
+      justify-content: space-between;
       // justify-content: space-between;
       // flex-grow: 1;
       // display: -webkit-box;
@@ -156,7 +157,11 @@
 
 .navigation__mobile__login {
   background-color: transparent;
-  margin-top: 7rem;
+  margin-top: 25rem;
+  border: 2px solid hotpink;
+  height: 5rem;
+
+  justify-self: flex-end;
 }
 
 .navigation__mobile__login a {

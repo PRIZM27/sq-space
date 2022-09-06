@@ -203,7 +203,15 @@ a:link {
 .nav-top-link-box a {
   display: flex;
   align-items: center;
-  height: 100%; }
+  height: 100%; 
+
+}
+
+.nav-top-link-box button:hover,
+.nav-top-link-box a:hover {
+  height: 100rem;
+
+}
   .nav-top-link-box button:not(:last-child),
   .nav-top-link-box a:not(:last-child) {
     margin-right: 4rem; }
@@ -312,8 +320,8 @@ a:link {
   position: fixed;
   margin: 0 auto;
   top: 12rem;
-  width: 80%;
-  height: 30rem;
+  width: 60%;
+  height: 32rem;
   display: flex;
   justify-content: space-around;
   padding: 3rem 5rem;
@@ -347,13 +355,19 @@ a:link {
   min-width: 100vw;
   height: 5px;
   z-index: 2;
-  height: 10px; }
-  .popup__trim__expand {
+  height: 10px; 
+
+}
+
+  .popup__trim--expand {
     position: fixed;
     background-color: #000;
     min-width: 100vw;
-    height: 50rem;
-    z-index: 2; }
+    height: 70rem;
+    z-index: 2; 
+  }
+
+ 
 
 .drop-down {
   display: flex;
@@ -707,26 +721,32 @@ a:link {
       flex-direction: column; } }
   .footer .preferences__settings {
     padding-left: 4rem;
-    width: 75%; }
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column; }
     @media only screen and (max-width: 64.06em) {
       .footer .preferences__settings {
         order: 1;
-        display: flex;
         justify-content: center;
+        flex-direction: row;
         padding-left: 0;
         padding-bottom: 2rem;
         margin: 0 auto; } }
     .footer .preferences__settings .currency__box {
       width: 15rem; }
+      @media screen and (min-width: 80em) {
+        .footer .preferences__settings .currency__box {
+          margin-bottom: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer .preferences__settings .currency__box {
+          margin-right: 2rem; } }
       .footer .preferences__settings .currency__box a {
         width: 100%;
         display: inline-block;
-        margin-right: 2rem;
-        text-align: left; }
+        text-align: center; }
         .footer .preferences__settings .currency__box a .arrow-down-filled {
           float: right; }
     .footer .preferences__settings .language__box {
-      margin-left: 2rem;
       width: 15rem; }
   .footer__nav__container {
     display: flex;
@@ -830,7 +850,8 @@ a:link {
       position: relative;
       display: flex;
       flex-direction: column;
-      padding-top: 92px; }
+      padding-top: 92px;
+      justify-content: space-between; }
     .navigation__mobile__menu__children {
       display: flex;
       justify-content: start;
@@ -892,7 +913,10 @@ a:link {
 
 .navigation__mobile__login {
   background-color: transparent;
-  margin-top: 7rem; }
+  margin-top: 25rem;
+  border: 2px solid hotpink;
+  height: 5rem;
+  justify-self: flex-end; }
 
 .navigation__mobile__login a {
   display: flex;

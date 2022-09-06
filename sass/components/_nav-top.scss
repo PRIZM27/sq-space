@@ -57,6 +57,10 @@
     &:not(:last-child) {
       margin-right: 4rem;
     }
+    
+    &:hover { 
+      height: 300px;
+    }
   }
 
   &-top-link-box button {
@@ -70,6 +74,8 @@
   &__span--top {
     display: flex;
     flex-grow: 2;
+
+ 
   }
 
   // Styling for home page top navigation

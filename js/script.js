@@ -9,6 +9,7 @@ const dropDown = document.querySelector('.drop-down');
 // Container for: products, templates, and resources links in top nav
 const revealPopupsLinkBox = document.querySelector('.nav-top-link-box');
 const popupNavShell = document.querySelector('.popup__nav__shell');
+const popupNavListBox = document.querySelector('.popup__nav__list__box');
 const popupNavContentBox = document.querySelector('.popup__nav__content-box');
 
 // Resources Menu selectors
@@ -30,14 +31,14 @@ const showPopupNav = document.querySelectorAll('.show-popup-nav');
 // Popup navs
 const toggleProductsMenu = function () {
   dropDown.classList.toggle('popup__trim');
-  dropDown.classList.toggle('popup__trim__expand');
+  dropDown.classList.toggle('popup__trim--expand');
   popupNavShell.classList.toggle('show__resources');
 };
 
 const toggleResourcesMenu = function () {
   dropDown.classList.toggle('popup__trim');
-  dropDown.classList.toggle('popup__trim__expand');
-  // resourcesMenu.classList.toggle('popup__trim__expand');
+  dropDown.classList.toggle('popup__trim--expand');
+  // resourcesMenu.classList.toggle('popup__trim--expand');
   // resourcesMenu.classList.toggle('resources__dropdown');
   resourcesMenuShell.classList.toggle('show__resources');
   // resourcesMenuShell.classList.toggle('popup__nav--hidePop');
@@ -70,6 +71,61 @@ revealPopupsLinkBox.addEventListener(
   },
   true
 );
+
+popupNavShell.addEventListener(
+  'mouseenter',
+  function (e) {
+    e.target.classList.contains('popup__nav__shell') ? toggleProductsMenu() : '';
+
+
+    // e.target.classList.contains('popup__nav__shell')
+    //   ? toggleResourcesMenu()
+    //   : '';
+  },
+  true
+);
+
+popupNavShell.addEventListener(
+  'mouseleave',
+  function (e) {
+    e.target.classList.contains('popup__nav__shell') ? toggleProductsMenu() : '';
+
+    dropDown.classList.remove('popup__trim--expand');
+
+    // e.target.classList.contains('popup__nav__shell')
+    //   ? toggleResourcesMenu()
+    //   : '';
+  },
+  false
+);
+
+resourcesMenuShell.addEventListener(
+  'mouseenter',
+  function (e) {
+    // e.target.classList.contains('resources__menu__shell') ? toggleProductsMenu() : '';
+
+    e.target.classList.contains('resources__menu__shell')
+      ? toggleResourcesMenu()
+      : '';
+  },
+  true
+);
+
+resourcesMenuShell.addEventListener(
+  'mouseleave',
+  function (e) {
+    // e.target.classList.contains('resources__menu__shell') ? toggleProductsMenu() : '';
+
+    e.target.classList.contains('resources__menu__shell')
+      ? toggleResourcesMenu()
+      : '';
+
+      dropDown.classList.remove('popup__trim--expand');
+
+  },
+  false
+);
+
 
 // Image slider component
 const slider = function () {
@@ -173,11 +229,55 @@ stickyNavObserver.observe(heroParent);
 // Revealing elements on scroll
 
 const allReveals = document.querySelectorAll('.reveal');
+const sections = document.querySelectorAll('section');
 
+let entryCount = 0;
+
+// Test function to reveal hidden elements
+// const revealHidden = function (entries, observer) {
+//   // console.log('OBSERVING');
+//   // // loop through & observe each section entry
+//   entries.forEach((entry) => {
+//     // console.log(entry);
+//     if (!entry.isIntersecting) return;
+//     // entry.target.style.background = 'green';
+
+//     console.log(entry.target);
+
+//     // console.log(entry.target.children);
+//     // if (entry.target.children.classList.contains('.reveal')) {
+//     //   document.querySelectorAll('.reveal').classList.remove('section--hidden');
+//     // }
+//     // observer.unobserve(entry.target);
+//     const childrenArray = Array.from(entry.target.children);
+
+//     childrenArray.forEach((el) => {
+//       if (el.classList.contains('.reveal')) {
+//         el.classList.remove('section--hidden');
+//       }
+//     });
+//   });
+// };
+
+// const hiddenSectionObserver = new IntersectionObserver(revealHidden, {
+//   root: null,
+//   threshold: 1,
+// });
+
+// allReveals.forEach((reveal) => reveal.classList.add('section--hidden'));
+
+// sections.forEach((section) => {
+//   hiddenSectionObserver.observe(section);
+// });
+
+// Callback for observer to reveal hidden els (working!)
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   // console.log(entry);
-
+  console.log(entry);
+  console.log(entries);
+  entryCount++;
+  console.log('ENTRY COUNT', entryCount - 1);
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
@@ -185,13 +285,13 @@ const revealSection = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
+const hiddenSectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.1,
+  threshold: [0, 0.25, 0.5, 0.75, 1],
 });
 
 allReveals.forEach(function (section) {
-  sectionObserver.observe(section);
+  hiddenSectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
 

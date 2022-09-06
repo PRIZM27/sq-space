@@ -13,36 +13,44 @@
 
   .preferences__settings {
     padding-left: 4rem;
-    width: 75%;
-
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    // width: 75%;
     @include respond(laptop) {
       order: 1;
-      display: flex;
       justify-content: center;
+      flex-direction: row;
       padding-left: 0;
       padding-bottom: 2rem;
       margin: 0 auto;
     }
 
     @include respond(phone) {
-      // margin: 0;
-      // // justify-content: center;
+      // flex-direction: row;
     }
 
     .currency__box {
       width: 15rem;
+
+      @media screen and (min-width: 80em) {
+        margin-bottom: 2rem;
+      }
+      @include respond(phone) {
+        margin-right: 2rem;
+      }
+
       a {
         width: 100%;
         display: inline-block;
-        margin-right: 2rem;
-        text-align: left;
+        text-align: center;
         .arrow-down-filled {
           float: right;
         }
       }
     }
     .language__box {
-      margin-left: 2rem;
+      // margin-left: 2rem;
       width: 15rem;
     }
   }
